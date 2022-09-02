@@ -16,7 +16,15 @@ However, with MaterialLib, this code will work on 1.8+
 MetaMaterial mm = MaterialLib.getMaterial("PLAYER_HEAD");
 ItemStack is = mm.createItemStack(1);
 ```
-It's that easy!
+It's that easy! On 1.13+ this will work exactly the same, but below 1.13 it will create an ItemStack with the SKULL material and a data value of 3
+
+Since 1.1.0, it's possible to *reverse lookup* MetaMaterials given a Block or ItemStack like so:
+```java
+MetaMaterial mm = MaterialLib.getMaterial(is);
+// This will give the PLAYER_HEAD MetaMaterial regardless
+// of version, rather than the SKULL or PLAYER_HEAD Bukkit material
+// that the ItemStack actually has.
+```        
 
 ### Concrete
 Concrete was added in 1.12, meaning that an exact match can only be found on 1.12 and above. Below is an example of how this works.
