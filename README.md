@@ -46,6 +46,18 @@ But what if you only want exact matches? The example below shows how to achieve 
 MetaMaterial mm = MaterialLib.getMaterial("CYAN_CONCRETE");
 if (!mm.isExactMatch()) mm = null;
 ```
+
+## Using
+Since version 1.1.0, MaterialLib has been hosted on [the Central repository](https://repo1.maven.org/maven2/xyz/wasabicodes/matlib/).
+You can add the library as a dependency like so:
+```xml
+<dependency>
+    <groupId>xyz.wasabicodes</groupId>
+    <artifactId>matlib</artifactId>
+    <version>1.1.0</version>
+</dependency>
+```
+
 ## Notes
 - The vast majority of mappings in MaterialLib are determined by comparing the list of Material enum names between versions. This misses some nuances, like `BRICK` meaning the brick item in 1.13+ but actually meaning the bricks block in 1.12 and below. Manual exceptions are added in these cases and there are probably some cases I have missed. Please make an issue on GitHub if you find any.
 - Some MetaMaterials actually use a Bukkit material that differs from the one supplied by `#getBukkitMaterial()` depending on if it is being applied to a Block or an ItemStack, for example `SPRUCE_DOOR` and `SPRUCE_DOOR_ITEM` (< 1.13) being used for the same `SPRUCE_DOOR` MetaMaterial.

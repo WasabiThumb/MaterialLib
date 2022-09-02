@@ -10,6 +10,40 @@
     <packaging>jar</packaging>
 
     <name>MaterialLib</name>
+    <description>Version-independent Material library for Bukkit 1.8+</description>
+    <url>https://github.com/WasabiThumb/MaterialLib/</url>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>https://raw.githubusercontent.com/WasabiThumb/MaterialLib/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>wasabi</id>
+            <name>Wasabi Thumbs</name>
+            <email>wasabithumbs@gmail.com</email>
+            <organization>Wasabi Codes</organization>
+            <organizationUrl>https://wasabicodes.xyz/</organizationUrl>
+            <roles>
+                <role>developer</role>
+            </roles>
+            <timezone>-5</timezone>
+            <properties>
+                <picUrl>https://avatars.githubusercontent.com/u/29989488</picUrl>
+            </properties>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/WasabiThumb/MaterialLib.git</connection>
+        <developerConnection>scm:git:git://github.com/WasabiThumb/MaterialLib.git</developerConnection>
+        <url>https://github.com/WasabiThumb/MaterialLib</url>
+        <tag>HEAD</tag>
+    </scm>
 
     <properties>
         <java.version>1.8</java.version>
@@ -85,6 +119,24 @@
                         <goals>
                             <goal>jar</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <keyname>EA678595BEF5AD55</keyname>
+                            <!-- <gpg.keyname>EA678595BEF5AD55</gpg.keyname> -->
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
