@@ -56,7 +56,7 @@ You can add the library as a dependency like so:
 <dependency>
     <groupId>xyz.wasabicodes</groupId>
     <artifactId>matlib</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
