@@ -8,40 +8,36 @@ The main use cases for MaterialLib would be to make version-independent Inventor
 ## Examples
 ### Player Head
 This code will only work on 1.13+
-
-    ItemStack is = new ItemStack(Material.PLAYER_HEAD, 1);
-
+```java
+ItemStack is = new ItemStack(Material.PLAYER_HEAD, 1);
+```
 However, with MaterialLib, this code will work on 1.8+
-
-
-
-    MetaMaterial mm = MaterialLib.getMaterial("PLAYER_HEAD");
-    ItemStack is = mm.createItemStack(1);
-
+```java
+MetaMaterial mm = MaterialLib.getMaterial("PLAYER_HEAD");
+ItemStack is = mm.createItemStack(1);
+```
 It's that easy!
 
 ### Concrete
 Concrete was added in 1.12, meaning that an exact match can only be found on 1.12 and above. Below is an example of how this works.
-
-
-    Block b = Bukkit.getWorld("world").getSpawnLocation().getBlock();
-    MetaMaterial mm = MaterialLib.getMaterial("RED_CONCRETE");
-    mm.apply(b);
-    // On 1.13+, this sets the block at spawn to Material.RED_CONCRETE
-    // On 1.12, this sets the block at spawn to Material.CONCRETE with data value 14 (making it red)
-    // Below 1.12, this sets the block at spawn to Material.STAINED_CLAY with data value 14 (red terracotta)
-    Material m = mm.getBukkitMaterial();
-    // This will get the Material associated with this MetaMaterial
-    // Notably, using this material to change the type of the block will not always
-    // produce the same result, because the data value will not be updated
-    // unlike when using the MetaMaterial
-
+```java
+Block b = Bukkit.getWorld("world").getSpawnLocation().getBlock();
+MetaMaterial mm = MaterialLib.getMaterial("RED_CONCRETE");
+mm.apply(b);
+// On 1.13+, this sets the block at spawn to Material.RED_CONCRETE
+// On 1.12, this sets the block at spawn to Material.CONCRETE with data value 14 (making it red)
+// Below 1.12, this sets the block at spawn to Material.STAINED_CLAY with data value 14 (red terracotta)
+Material m = mm.getBukkitMaterial();
+// This will get the Material associated with this MetaMaterial
+// Notably, using this material to change the type of the block will not always
+// produce the same result, because the data value will not be updated
+// unlike when using the MetaMaterial
+```
 But what if you only want exact matches? The example below shows how to achieve that:
-
-
-    MetaMaterial mm = MaterialLib.getMaterial("CYAN_CONCRETE");
-    if (!mm.isExactMatch()) mm = null;
-
+```java
+MetaMaterial mm = MaterialLib.getMaterial("CYAN_CONCRETE");
+if (!mm.isExactMatch()) mm = null;
+```
 ## Notes
 - The vast majority of mappings in MaterialLib are determined by comparing the list of Material enum names between versions. This misses some nuances, like `BRICK` meaning the brick item in 1.13+ but actually meaning the bricks block in 1.12 and below. Manual exceptions are added in these cases and there are probably some cases I have missed. Please make an issue on GitHub if you find any.
 - Some MetaMaterials actually use a Bukkit material that differs from the one supplied by `#getBukkitMaterial()` depending on if it is being applied to a Block or an ItemStack, for example `SPRUCE_DOOR` and `SPRUCE_DOOR_ITEM` (< 1.13) being used for the same `SPRUCE_DOOR` MetaMaterial.
