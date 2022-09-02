@@ -8,6 +8,7 @@ import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Range;
 
+import java.util.Locale;
 import java.util.function.Consumer;
 
 public class MetaMaterial {
@@ -16,11 +17,14 @@ public class MetaMaterial {
     private final boolean exact;
     private final Consumer<Block> blockApply;
     private final Consumer<ItemStack> itemApply;
+    private String name;
+    private boolean nameDefined = false;
     public MetaMaterial(Material bukkitMaterial, boolean exact, Consumer<Block> blockApply, Consumer<ItemStack> itemApply) {
         this.bukkitMaterial = bukkitMaterial;
         this.exact = exact;
         this.blockApply = blockApply;
         this.itemApply = itemApply;
+        this.name = (bukkitMaterial != null ? bukkitMaterial.name().toLowerCase(Locale.ROOT) : null);
     }
 
     public MetaMaterial(Material bukkitMaterial, boolean exact, byte data) {
@@ -45,6 +49,7 @@ public class MetaMaterial {
 
     public MetaMaterial(Material bukkitMaterial) {
         this(bukkitMaterial, true, Applicators.blockBasic(bukkitMaterial), Applicators.itemBasic(bukkitMaterial));
+        nameDefined = true;
     }
 
     public MetaMaterial(String bukkitMaterial, boolean exact, Consumer<Block> blockApply, Consumer<ItemStack> itemApply) {
@@ -98,6 +103,19 @@ public class MetaMaterial {
      */
     public final void apply(@NotNull ItemStack is) {
         itemApply.accept(is);
+    }
+
+    public boolean setName(String name) {
+        if (!nameDefined) {
+            this.name = name;
+            nameDefined = true;
+            return true;
+        }
+        return false;
+    }
+
+    public String getName() {
+        return this.name;
     }
 
     /**

@@ -15,11 +15,15 @@ public class MaterialMap implements Map<String, MetaMaterial> {
     private final HashMap<String, MetaMaterial> backingMap = new HashMap<>();
 
     protected void set(String key, MetaMaterial material) {
-        backingMap.put(key.toUpperCase(Locale.ROOT), material);
+        String k = key.toUpperCase(Locale.ROOT);
+        material.setName(k);
+        backingMap.put(k, material);
     }
 
     protected void set(Material key, MetaMaterial material) {
-        backingMap.put(key.name().toUpperCase(Locale.ROOT), material);
+        String k = key.name().toUpperCase(Locale.ROOT);
+        material.setName(k);
+        backingMap.put(k, material);
     }
 
     protected boolean unset(String key) {
