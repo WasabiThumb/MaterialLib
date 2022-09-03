@@ -10,6 +10,8 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+
 import static xyz.wasabicodes.matlib.util.Version.isVersion;
 
 public class MaterialLib {

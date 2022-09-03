@@ -1,6 +1,5 @@
 package xyz.wasabicodes.matlib.struct.applicator;
 
-import xyz.wasabicodes.matlib.MaterialLib;
 import xyz.wasabicodes.matlib.struct.applicator.block.*;
 import xyz.wasabicodes.matlib.struct.applicator.item.*;
 import org.bukkit.Material;
@@ -12,7 +11,7 @@ import java.util.function.Consumer;
 public class Applicators {
 
     public static BlockMaterialApplicator blockAir() {
-        return new BasicBlockMaterialApplicator(MaterialLib.getMaterial("AIR").getBukkitMaterial());
+        return new BasicBlockMaterialApplicator(Material.matchMaterial("AIR"));
     }
 
     public static BlockMaterialApplicator blockBasic(Material material) {
