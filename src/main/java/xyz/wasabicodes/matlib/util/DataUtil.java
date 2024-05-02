@@ -1,4 +1,4 @@
-package xyz.wasabicodes.matlib.util;
+package io.github.wasabithumb.matlib.util;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

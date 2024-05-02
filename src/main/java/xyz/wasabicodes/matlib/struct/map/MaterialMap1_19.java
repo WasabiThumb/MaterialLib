@@ -1,7 +1,7 @@
-package xyz.wasabicodes.matlib.struct.map;
+package io.github.wasabithumb.matlib.struct.map;
 
-import xyz.wasabicodes.matlib.struct.MetaMaterial;
-import xyz.wasabicodes.matlib.util.Version;
+import io.github.wasabithumb.matlib.struct.MetaMaterial;
+import io.github.wasabithumb.matlib.util.Version;
 
 public class MaterialMap1_19 extends MaterialMap {
 

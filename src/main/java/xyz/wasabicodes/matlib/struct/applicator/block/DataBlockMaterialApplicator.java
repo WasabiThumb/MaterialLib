@@ -1,6 +1,6 @@
-package xyz.wasabicodes.matlib.struct.applicator.block;
+package io.github.wasabithumb.matlib.struct.applicator.block;
 
-import xyz.wasabicodes.matlib.util.DataUtil;
+import io.github.wasabithumb.matlib.util.DataUtil;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
 

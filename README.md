@@ -50,14 +50,35 @@ if (!mm.isExactMatch()) mm = null;
 ```
 
 ## Using
-Since version 1.1.0, MaterialLib has been hosted on [the Central repository](https://repo1.maven.org/maven2/xyz/wasabicodes/matlib/).
-You can add the library as a dependency like so:
+**Maven**
 ```xml
-<dependency>
-    <groupId>xyz.wasabicodes</groupId>
-    <artifactId>matlib</artifactId>
-    <version>1.1.2</version>
-</dependency>
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
+<dependencies>
+    <dependency>
+        <groupId>com.github.WasabiThumb</groupId>
+        <artifactId>MaterialLib</artifactId>
+        <version>1.1.3</version>
+    </dependency>
+</dependencies>
+```
+**Gradle**
+```groovy
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+dependencies {
+    implementation 'com.github.WasabiThumb:MaterialLib:1.1.3'
+}
 ```
 
 ## Notes

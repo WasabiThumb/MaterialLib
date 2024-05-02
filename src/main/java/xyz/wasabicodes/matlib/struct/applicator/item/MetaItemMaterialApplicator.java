@@ -1,4 +1,4 @@
-package xyz.wasabicodes.matlib.struct.applicator.item;
+package io.github.wasabithumb.matlib.struct.applicator.item;
 
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
