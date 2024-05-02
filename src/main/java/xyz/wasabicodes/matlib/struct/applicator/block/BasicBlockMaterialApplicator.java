@@ -1,4 +1,4 @@
-package io.github.wasabithumb.matlib.struct.applicator.block;
+package xyz.wasabicodes.matlib.struct.applicator.block;
 
 import org.bukkit.Material;
 import org.bukkit.block.Block;

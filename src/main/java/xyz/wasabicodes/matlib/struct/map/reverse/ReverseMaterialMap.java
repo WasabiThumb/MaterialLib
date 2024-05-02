@@ -1,14 +1,14 @@
-package io.github.wasabithumb.matlib.struct.map.reverse;
+package xyz.wasabicodes.matlib.struct.map.reverse;
 
-import io.github.wasabithumb.matlib.struct.MetaMaterial;
-import io.github.wasabithumb.matlib.struct.applicator.block.BlockMaterialApplicator;
-import io.github.wasabithumb.matlib.struct.applicator.block.DataBlockMaterialApplicator;
-import io.github.wasabithumb.matlib.struct.applicator.item.DataItemMaterialApplicator;
-import io.github.wasabithumb.matlib.struct.applicator.item.DurabilityItemMaterialApplicator;
-import io.github.wasabithumb.matlib.struct.applicator.item.ItemMaterialApplicator;
-import io.github.wasabithumb.matlib.struct.map.MaterialMap;
-import io.github.wasabithumb.matlib.util.DataUtil;
-import io.github.wasabithumb.matlib.util.Version;
+import xyz.wasabicodes.matlib.struct.MetaMaterial;
+import xyz.wasabicodes.matlib.struct.applicator.block.BlockMaterialApplicator;
+import xyz.wasabicodes.matlib.struct.applicator.block.DataBlockMaterialApplicator;
+import xyz.wasabicodes.matlib.struct.applicator.item.DataItemMaterialApplicator;
+import xyz.wasabicodes.matlib.struct.applicator.item.DurabilityItemMaterialApplicator;
+import xyz.wasabicodes.matlib.struct.applicator.item.ItemMaterialApplicator;
+import xyz.wasabicodes.matlib.struct.map.MaterialMap;
+import xyz.wasabicodes.matlib.util.DataUtil;
+import xyz.wasabicodes.matlib.util.Version;
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Nullable;

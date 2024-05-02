@@ -1,6 +1,6 @@
-package io.github.wasabithumb.matlib.struct.map.reverse;
+package xyz.wasabicodes.matlib.struct.map.reverse;
 
-import io.github.wasabithumb.matlib.struct.MetaMaterial;
+import xyz.wasabicodes.matlib.struct.MetaMaterial;
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;
 

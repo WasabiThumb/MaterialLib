@@ -1,6 +1,6 @@
-package io.github.wasabithumb.matlib.struct.applicator.item;
+package xyz.wasabicodes.matlib.struct.applicator.item;
 
-import io.github.wasabithumb.matlib.util.DataUtil;
+import xyz.wasabicodes.matlib.util.DataUtil;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 
