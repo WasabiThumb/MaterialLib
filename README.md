@@ -1,7 +1,7 @@
 # MaterialLib
 <img src="https://img.shields.io/github/v/release/WasabiThumb/MaterialLib?include_prereleases&style=flat-square"> <img src="https://img.shields.io/github/downloads/WasabiThumb/MaterialLib/total?style=flat-square"> <img src="https://img.shields.io/github/license/WasabiThumb/MaterialLib?style=flat-square"> <img src="https://img.shields.io/github/last-commit/WasabiThumb/MaterialLib?style=flat-square">
 
-A tool to convert Material names from the latest version of the Bukkit API (currently 1.19.X) to suitable alternatives on the current server platform.
+A tool to convert Material names from the latest version of the Bukkit API (currently 1.20.X) to suitable alternatives on the current server platform.
 
 MaterialLib currently supports 1.8+, there is no intention on backporting further at this time.
 

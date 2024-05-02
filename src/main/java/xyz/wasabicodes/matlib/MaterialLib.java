@@ -10,8 +10,6 @@ import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-
 import static xyz.wasabicodes.matlib.util.Version.isVersion;
 
 public class MaterialLib {
@@ -19,8 +17,10 @@ public class MaterialLib {
     private static final MaterialMap mMap;
     private static final ReverseMaterialMap rmMap;
     static {
-        if (isVersion(19)) {
+        if (isVersion(20)) {
             mMap = new MaterialMap();
+        } else if (isVersion(19)) {
+            mMap = new MaterialMap1_19();
         } else if (isVersion(18)) {
             mMap = new MaterialMap1_18();
         } else if (isVersion(17)) {
