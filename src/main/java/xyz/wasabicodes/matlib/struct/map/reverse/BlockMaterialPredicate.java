@@ -44,6 +44,17 @@ interface BlockMaterialPredicate extends MaterialPredicate {
         return this.matches((Block) object);
     }
 
+    int weight();
+
+    @Override
+    default int compareTo(@NotNull MaterialPredicate materialPredicate) {
+        if (materialPredicate instanceof BlockMaterialPredicate) {
+            int other = ((BlockMaterialPredicate) materialPredicate).weight();
+            return Integer.compare(other, this.weight());
+        }
+        return MaterialPredicate.super.compareTo(materialPredicate);
+    }
+
     //
 
     @ApiStatus.Internal
@@ -74,6 +85,11 @@ interface BlockMaterialPredicate extends MaterialPredicate {
         @Override
         public String getAppliesTo() {
             return this.bukkitMaterial.name();
+        }
+
+        @Override
+        public int weight() {
+            return this.ignoreData ? 0 : 1;
         }
 
     }

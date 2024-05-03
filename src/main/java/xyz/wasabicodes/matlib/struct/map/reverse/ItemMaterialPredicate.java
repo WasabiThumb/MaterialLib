@@ -58,6 +58,17 @@ interface ItemMaterialPredicate extends MaterialPredicate {
         return this.matches((ItemStack) object);
     }
 
+    int weight();
+
+    @Override
+    default int compareTo(@NotNull MaterialPredicate materialPredicate) {
+        if (materialPredicate instanceof ItemMaterialPredicate) {
+            int other = ((ItemMaterialPredicate) materialPredicate).weight();
+            return Integer.compare(other, this.weight());
+        }
+        return MaterialPredicate.super.compareTo(materialPredicate);
+    }
+
     //
 
     @ApiStatus.Internal
@@ -90,6 +101,11 @@ interface ItemMaterialPredicate extends MaterialPredicate {
             return this.bukkitMaterial.name();
         }
 
+        @Override
+        public int weight() {
+            return this.ignoreData ? 0 : 1;
+        }
+
     }
 
     @ApiStatus.Internal
@@ -117,6 +133,11 @@ interface ItemMaterialPredicate extends MaterialPredicate {
         @Override
         public String getAppliesTo() {
             return this.bukkitMaterial.name();
+        }
+
+        @Override
+        public int weight() {
+            return 2;
         }
 
     }
@@ -176,6 +197,11 @@ interface ItemMaterialPredicate extends MaterialPredicate {
                 e.printStackTrace();
                 return new byte[0];
             }
+        }
+
+        @Override
+        public int weight() {
+            return 3;
         }
 
     }

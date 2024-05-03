@@ -2,21 +2,12 @@ package xyz.wasabicodes.matlib.struct.map.reverse;
 
 import org.bukkit.Material;
 import xyz.wasabicodes.matlib.struct.MetaMaterial;
-import xyz.wasabicodes.matlib.struct.applicator.block.BlockMaterialApplicator;
-import xyz.wasabicodes.matlib.struct.applicator.block.DataBlockMaterialApplicator;
-import xyz.wasabicodes.matlib.struct.applicator.item.DataItemMaterialApplicator;
-import xyz.wasabicodes.matlib.struct.applicator.item.DurabilityItemMaterialApplicator;
-import xyz.wasabicodes.matlib.struct.applicator.item.ItemMaterialApplicator;
 import xyz.wasabicodes.matlib.struct.map.MaterialMap;
-import xyz.wasabicodes.matlib.util.DataUtil;
-import xyz.wasabicodes.matlib.util.Version;
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
 
 public class ReverseMaterialMap {
 
@@ -34,11 +25,22 @@ public class ReverseMaterialMap {
             ItemMaterialPredicate imp = ItemMaterialPredicate.of(mm);
             this.addEntry(imp, this.itemMap);
         }
+        this.sort(this.blockMap);
+        this.sort(this.itemMap);
     }
 
     private <T extends MaterialPredicate> void addEntry(T t, Map<String, List<T>> map) {
         String key = t.getAppliesTo().toUpperCase(Locale.ROOT);
         map.computeIfAbsent(key, k -> new LinkedList<>()).add(t);
+    }
+
+    private <T extends MaterialPredicate> void sort(Map<String, List<T>> map) {
+        List<T> v;
+        for (String s : map.keySet()) {
+            v = map.get(s);
+            if (v == null) continue;
+            v.sort(Comparator.naturalOrder());
+        }
     }
 
     public @Nullable MetaMaterial get(Block block) {
