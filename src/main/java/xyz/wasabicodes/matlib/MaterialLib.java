@@ -1,8 +1,9 @@
 package xyz.wasabicodes.matlib;
 
 import xyz.wasabicodes.matlib.struct.MetaMaterial;
+import xyz.wasabicodes.matlib.struct.map.impl.*;
 import xyz.wasabicodes.matlib.struct.map.MaterialMap;
-import xyz.wasabicodes.matlib.struct.map.*;
+import xyz.wasabicodes.matlib.struct.map.proxy.ProxiedMaterialMap;
 import xyz.wasabicodes.matlib.struct.map.reverse.ReverseMaterialMap;
 import org.bukkit.Material;
 import org.bukkit.block.Block;
@@ -17,33 +18,25 @@ public class MaterialLib {
     private static final MaterialMap mMap;
     private static final ReverseMaterialMap rmMap;
     static {
-        if (isVersion(20)) {
-            mMap = new MaterialMap();
-        } else if (isVersion(19)) {
-            mMap = new MaterialMap1_19();
-        } else if (isVersion(18)) {
-            mMap = new MaterialMap1_18();
-        } else if (isVersion(17)) {
-            mMap = new MaterialMap1_17();
-        } else if (isVersion(16)) {
-            mMap = new MaterialMap1_16();
-        } else if (isVersion(15)) {
-            mMap = new MaterialMap1_15();
+        MaterialMap base;
+        if (isVersion(15)) {
+            base = new MaterialMapImpl();
         } else if (isVersion(14)) {
-            mMap = new MaterialMap1_14();
+            base = new MaterialMapImpl1_14();
         } else if (isVersion(13)) {
-            mMap = new MaterialMap1_13();
+            base = new MaterialMapImpl1_13();
         } else if (isVersion(12)) {
-            mMap = new MaterialMap1_12();
+            base = new MaterialMapImpl1_12();
         } else if (isVersion(11)) {
-            mMap = new MaterialMap1_11();
+            base = new MaterialMapImpl1_11();
         } else if (isVersion(10)) {
-            mMap = new MaterialMap1_10();
+            base = new MaterialMapImpl1_10();
         } else if (isVersion(9)) {
-            mMap = new MaterialMap1_9();
+            base = new MaterialMapImpl1_9();
         } else {
-            mMap = new MaterialMap1_8();
+            base = new MaterialMapImpl1_8();
         }
+        mMap = isVersion(20) ? base : new ProxiedMaterialMap(base);
         rmMap = new ReverseMaterialMap(mMap);
     }
 
