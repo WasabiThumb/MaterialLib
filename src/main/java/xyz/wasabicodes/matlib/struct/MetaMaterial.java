@@ -24,7 +24,7 @@ public class MetaMaterial {
         this.exact = exact;
         this.blockApply = blockApply;
         this.itemApply = itemApply;
-        this.name = (bukkitMaterial != null ? bukkitMaterial.name().toLowerCase(Locale.ROOT) : null);
+        this.name = (bukkitMaterial != null ? bukkitMaterial.name().toUpperCase(Locale.ROOT) : null);
     }
 
     public MetaMaterial(Material bukkitMaterial, boolean exact, byte data) {
