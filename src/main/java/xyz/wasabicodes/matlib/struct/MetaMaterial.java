@@ -64,6 +64,13 @@ public class MetaMaterial {
         this(Material.matchMaterial(bukkitMaterial), true, Applicators.blockBasic(bukkitMaterial), Applicators.itemBasic(bukkitMaterial));
     }
 
+    public MetaMaterial(MetaMaterial other, boolean exact) {
+        this.bukkitMaterial = other.bukkitMaterial;
+        this.exact = exact;
+        this.blockApply = other.blockApply;
+        this.itemApply = other.itemApply;
+    }
+
     /**
      * Gets the Bukkit material applied by this MetaMaterial. Note that, for example,
      * ItemStack#setType(Material) is often but not always the same as MetaMaterial#apply(ItemStack)

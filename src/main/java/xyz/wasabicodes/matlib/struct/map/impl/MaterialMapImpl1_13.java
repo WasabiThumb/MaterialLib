@@ -1,0 +1,132 @@
+package xyz.wasabicodes.matlib.struct.map.impl;
+
+import xyz.wasabicodes.matlib.struct.MetaMaterial;
+import org.bukkit.Color;
+import org.bukkit.inventory.meta.PotionMeta;
+
+import static xyz.wasabicodes.matlib.struct.applicator.Applicators.*;
+
+public class MaterialMapImpl1_13 extends MaterialMapImpl {
+
+    public MaterialMapImpl1_13() {
+        // 1.15 -> 1.14
+        set("BEE_NEST", new MetaMaterial(m("CHEST"), false));
+        set("BEE_SPAWN_EGG", new MetaMaterial(m("BAT_SPAWN_EGG"), false));
+        set("BEEHIVE", new MetaMaterial(m("SPAWNER"), false));
+        set("HONEY_BLOCK", new MetaMaterial(m("SLIME_BLOCK"), false));
+        set("HONEY_BOTTLE", new MetaMaterial(m("POTION"), false, blockAir(), itemMeta(m("POTION"), (PotionMeta pm) -> pm.setColor(Color.YELLOW), PotionMeta.class)));
+        set("HONEYCOMB", new MetaMaterial(m("SLIME_BALL"), false));
+        set("HONEYCOMB_BLOCK", new MetaMaterial(m("SPAWNER"), false));
+
+        // 1.14 -> 1.13
+        set("ACACIA_SIGN", new MetaMaterial(m("SIGN"), false));
+        set("ACACIA_WALL_SIGN", new MetaMaterial(m("WALL_SIGN"), false));
+        set("ANDESITE_SLAB", new MetaMaterial(m("STONE_SLAB"), false));
+        set("ANDESITE_STAIRS", new MetaMaterial(m("COBBLESTONE_STAIRS"), false));
+        set("ANDESITE_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("BAMBOO", new MetaMaterial(m("SUGAR_CANE"), false));
+        set("BAMBOO_SAPLING", new MetaMaterial(m("SUGAR_CANE"), false));
+        set("BARREL", new MetaMaterial(m("CHEST"), false));
+        set("BELL", new MetaMaterial(m("NOTE_BLOCK"), false));
+        set("BIRCH_SIGN", new MetaMaterial(m("SIGN"), false));
+        set("BIRCH_WALL_SIGN", new MetaMaterial(m("WALL_SIGN"), false));
+        set("BLACK_DYE", new MetaMaterial(m("INK_SAC")));
+        set("BLAST_FURNACE", new MetaMaterial(m("FURNACE"), false));
+        set("BLUE_DYE", new MetaMaterial(m("LAPIS_LAZULI")));
+        set("BRICK_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("BROWN_DYE", new MetaMaterial(m("COCOA_BEANS")));
+        set("CAMPFIRE", new MetaMaterial(m("FURNACE"), false));
+        set("CARTOGRAPHY_TABLE", new MetaMaterial(m("CRAFTING_TABLE"), false));
+        set("CAT_SPAWN_EGG", new MetaMaterial(m("OCELOT_SPAWN_EGG"), false));
+        set("COMPOSTER", new MetaMaterial(m("CAULDRON"), false));
+        set("CORNFLOWER", new MetaMaterial(m("BLUE_ORCHID"), false));
+        set("CREEPER_BANNER_PATTERN", new MetaMaterial(m("PAPER"), false));
+        set("CROSSBOW", new MetaMaterial(m("BOW"), false));
+        set("CUT_RED_SANDSTONE_SLAB", new MetaMaterial(m("RED_SANDSTONE_SLAB"), false));
+        set("CUT_SANDSTONE_SLAB", new MetaMaterial(m("SANDSTONE_SLAB"), false));
+        set("DARK_OAK_SIGN", new MetaMaterial(m("SIGN"), false));
+        set("DARK_OAK_WALL_SIGN", new MetaMaterial(m("SIGN"), false));
+        set("DEAD_BRAIN_CORAL", new MetaMaterial(m("DEAD_BRAIN_CORAL_BLOCK"), false));
+        set("DEAD_BUBBLE_CORAL", new MetaMaterial(m("DEAD_BUBBLE_CORAL_BLOCK"), false));
+        set("DEAD_FIRE_CORAL", new MetaMaterial(m("DEAD_FIRE_CORAL_BLOCK"), false));
+        set("DEAD_HORN_CORAL", new MetaMaterial(m("DEAD_HORN_CORAL_BLOCK"), false));
+        set("DEAD_TUBE_CORAL", new MetaMaterial(m("DEAD_TUBE_CORAL_BLOCK"), false));
+        set("DIORITE_SLAB", new MetaMaterial(m("STONE_SLAB"), false));
+        set("DIORITE_STAIRS", new MetaMaterial(m("COBBLESTONE_STAIRS"), false));
+        set("DIORITE_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("END_STONE_BRICK_SLAB", new MetaMaterial(m("STONE_BRICK_SLAB"), false));
+        set("END_STONE_BRICK_STAIRS", new MetaMaterial(m("STONE_BRICK_STAIRS"), false));
+        set("END_STONE_BRICK_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("FLETCHING_TABLE", new MetaMaterial(m("CRAFTING_TABLE"), false));
+        set("FLOWER_BANNER_PATTERN", new MetaMaterial(m("PAPER"), false));
+        set("FOX_SPAWN_EGG", new MetaMaterial(m("WOLF_SPAWN_EGG"), false));
+        set("GLOBE_BANNER_PATTERN", new MetaMaterial(m("PAPER"), false));
+        set("GRANITE_SLAB", new MetaMaterial(m("STONE_SLAB"), false));
+        set("GRANITE_STAIRS", new MetaMaterial(m("COBBLESTONE_STAIRS"), false));
+        set("GRANITE_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("GREEN_DYE", new MetaMaterial(m("CACTUS_GREEN")));
+        set("GRINDSTONE", new MetaMaterial(m("CRAFTING_TABLE"), false));
+        set("JIGSAW", new MetaMaterial(m("MAGENTA_GLAZED_TERRACOTTA"), false));
+        set("JUNGLE_SIGN", new MetaMaterial(m("SIGN"), false));
+        set("JUNGLE_WALL_SIGN", new MetaMaterial(m("WALL_SIGN"), false));
+        set("LANTERN", new MetaMaterial(m("TORCH"), false));
+        set("LEATHER_HORSE_ARMOR", new MetaMaterial(m("LEATHER_CHESTPLATE"), false));
+        set("LECTERN", new MetaMaterial(m("BOOKSHELF"), false));
+        set("LILY_OF_THE_VALLEY", new MetaMaterial(m("WHITE_TULIP"), false));
+        set("LOOM", new MetaMaterial(m("CRAFTING_TABLE"), false));
+        set("MOJANG_BANNER_PATTERN", new MetaMaterial(m("PAPER"), false));
+        set("MOSSY_COBBLESTONE_SLAB", new MetaMaterial(m("COBBLESTONE_SLAB"), false));
+        set("MOSSY_COBBLESTONE_STAIRS", new MetaMaterial(m("COBBLESTONE_STAIRS"), false));
+        set("MOSSY_STONE_BRICK_SLAB", new MetaMaterial(m("STONE_BRICK_SLAB"), false));
+        set("MOSSY_STONE_BRICK_STAIRS", new MetaMaterial(m("STONE_BRICK_STAIRS"), false));
+        set("MOSSY_STONE_BRICK_WALL", new MetaMaterial(m("MOSSY_COBBLESTONE_WALL"), false));
+        set("NETHER_BRICK_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("OAK_SIGN", new MetaMaterial(m("SIGN")));
+        set("OAK_WALL_SIGN", new MetaMaterial(m("WALL_SIGN")));
+        set("PANDA_SPAWN_EGG", new MetaMaterial(m("WOLF_SPAWN_EGG"), false));
+        set("PILLAGER_SPAWN_EGG", new MetaMaterial(m("ZOMBIE_VILLAGER_SPAWN_EGG"), false));
+        set("POLISHED_ANDESITE_SLAB", new MetaMaterial(m("STONE_SLAB"), false));
+        set("POLISHED_ANDESITE_STAIRS", new MetaMaterial(m("COBBLESTONE_STAIRS"), false));
+        set("POLISHED_DIORITE_SLAB", new MetaMaterial(m("STONE_SLAB"), false));
+        set("POLISHED_DIORITE_STAIRS", new MetaMaterial(m("COBBLESTONE_STAIRS"), false));
+        set("POLISHED_GRANITE_SLAB", new MetaMaterial(m("STONE_SLAB"), false));
+        set("POLISHED_GRANITE_STAIRS", new MetaMaterial(m("COBBLESTONE_STAIRS"), false));
+        set("POTTED_BAMBOO", new MetaMaterial(m("POTTED_BIRCH_SAPLING"), false));
+        set("POTTED_CORNFLOWER", new MetaMaterial(m("POTTED_BLUE_ORCHID"), false));
+        set("POTTED_LILY_OF_THE_VALLEY", new MetaMaterial(m("POTTED_WHITE_TULIP"), false));
+        set("POTTED_WITHER_ROSE", new MetaMaterial(m("POTTED_RED_TULIP"), false));
+        set("PRISMARINE_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("RAVAGER_SPAWN_EGG", new MetaMaterial(m("PIG_SPAWN_EGG"), false));
+        set("RED_DYE", new MetaMaterial(m("ROSE_RED")));
+        set("RED_NETHER_BRICK_SLAB", new MetaMaterial(m("NETHER_BRICK_SLAB"), false));
+        set("RED_NETHER_BRICK_STAIRS", new MetaMaterial(m("NETHER_BRICK_STAIRS"), false));
+        set("RED_NETHER_BRICK_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("RED_SANDSTONE_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("SANDSTONE_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("SCAFFOLDING", new MetaMaterial(m("LADDER"), false));
+        set("SKULL_BANNER_PATTERN", new MetaMaterial(m("PAPER"), false));
+        set("SMITHING_TABLE", new MetaMaterial(m("CRAFTING_TABLE"), false));
+        set("SMOKER", new MetaMaterial(m("FURNACE"), false));
+        set("SMOOTH_QUARTZ_SLAB", new MetaMaterial(m("QUARTZ_SLAB"), false));
+        set("SMOOTH_QUARTZ_STAIRS", new MetaMaterial(m("QUARTZ_STAIRS"), false));
+        set("SMOOTH_RED_SANDSTONE_SLAB", new MetaMaterial(m("RED_SANDSTONE_SLAB"), false));
+        set("SMOOTH_RED_SANDSTONE_STAIRS", new MetaMaterial(m("RED_SANDSTONE_STAIRS"), false));
+        set("SMOOTH_SANDSTONE_SLAB", new MetaMaterial(m("SANDSTONE_SLAB"), false));
+        set("SMOOTH_SANDSTONE_STAIRS", new MetaMaterial(m("SANDSTONE_STAIRS"), false));
+        set("SMOOTH_STONE_SLAB", new MetaMaterial(m("STONE_SLAB"), false));
+        set("SPRUCE_SIGN", new MetaMaterial(m("SIGN"), false));
+        set("SPRUCE_WALL_SIGN", new MetaMaterial(m("WALL_SIGN"), false));
+        set("STONE_BRICK_WALL", new MetaMaterial(m("COBBLESTONE_WALL"), false));
+        set("STONE_STAIRS", new MetaMaterial(m("STONE_BRICK_STAIRS"), false));
+        set("STONECUTTER", new MetaMaterial(m("CRAFTING_TABLE"), false));
+        set("SUSPICIOUS_STEW", new MetaMaterial(m("MUSHROOM_STEW"), false));
+        set("SWEET_BERRIES", new MetaMaterial(m("APPLE"), false));
+        set("SWEET_BERRY_BUSH", new MetaMaterial(m("SPRUCE_LEAVES"), false));
+        set("TRADER_LLAMA_SPAWN_EGG", new MetaMaterial(m("LLAMA_SPAWN_EGG"), false));
+        set("WANDERING_TRADER_SPAWN_EGG", new MetaMaterial(m("VILLAGER_SPAWN_EGG"), false));
+        set("WHITE_DYE", new MetaMaterial(m("BONE_MEAL")));
+        set("WITHER_ROSE", new MetaMaterial(m("RED_TULIP"), false));
+        set("YELLOW_DYE", new MetaMaterial(m("DANDELION_YELLOW")));
+    }
+
+}
