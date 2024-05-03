@@ -698,7 +698,7 @@ public class MaterialMapImpl1_10 extends MaterialMapImpl {
         set("WHITE_WOOL", new MetaMaterial(m("WOOL"), true));
         set("WITCH_SPAWN_EGG", new MetaMaterial(m("MONSTER_EGG"), true, 66));
         set("WITHER_SKELETON_SKULL", new MetaMaterial(m("SKULL"), true, Applicators.blockData(m("SKULL"), 1), Applicators.itemData(m("SKULL_ITEM"), 1)));
-        set("WITHER_SKELETON_SPAWN_EGG", new MetaMaterial(m("MONSTER_EGG"), true));
+        set("WITHER_SKELETON_SPAWN_EGG", new MetaMaterial(m("MONSTER_EGG"), true, 5));
         set("WITHER_SKELETON_WALL_SKULL", new MetaMaterial(m("SKULL"), true, 1));
         set("WOLF_SPAWN_EGG", new MetaMaterial(m("MONSTER_EGG"), true, 95));
         set("WOODEN_AXE", new MetaMaterial(m("WOOD_AXE"), true));
