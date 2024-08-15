@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/io.github.wasabithumb.matlib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/io.github.wasabithumb.matlib.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/matlib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/matlib.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/xyz.wasabicodes.matlib.main.iml" filepath="$PROJECT_DIR$/.idea/modules/xyz.wasabicodes.matlib.main.iml" />
     </modules>
   </component>
 </project>
