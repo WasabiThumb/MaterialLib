@@ -52,32 +52,22 @@ if (!mm.isExactMatch()) mm = null;
 ## Using
 **Maven**
 ```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
 <dependencies>
     <dependency>
-        <groupId>com.github.WasabiThumb</groupId>
-        <artifactId>MaterialLib</artifactId>
+        <groupId>io.github.wasabithumb</groupId>
+        <artifactId>matlib</artifactId>
         <version>1.1.3</version>
     </dependency>
 </dependencies>
 ```
 **Gradle**
 ```groovy
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-    }
+repositories {
+    mavenCentral()
 }
 
 dependencies {
-    implementation 'com.github.WasabiThumb:MaterialLib:1.1.3'
+    implementation 'io.github.wasabithumb:matlib:1.1.3'
 }
 ```
 

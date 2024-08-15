@@ -55,10 +55,6 @@ publishing {
     }
 }
 
-signing {
-    sign(publishing.publications["mavenJava"])
-}
-
 centralPortal {
     name = rootProject.name
 
